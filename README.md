@@ -1,4 +1,4 @@
-# Quantifying The World: 7 Assignments
+# Quantifying The World: 7 Case Studies
 May 2018 – Aug 2018
 
 Case Study 1: Data Imputation by Markov Chains in SAS
