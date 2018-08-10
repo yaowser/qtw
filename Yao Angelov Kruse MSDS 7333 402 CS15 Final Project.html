@@ -11778,7 +11778,7 @@ div#notebook {
 <h1 id="Case-Study-Unit-15---Unlabeled-Dataset-Modeling-and-Prediction">Case Study Unit 15 - Unlabeled Dataset Modeling and Prediction<a class="anchor-link" href="#Case-Study-Unit-15---Unlabeled-Dataset-Modeling-and-Prediction">&#182;</a></h1><p>Yao Yao, Ivelin Angelov, Brian Kruse</p>
 <p>MSDS 7333 Section 402</p>
 <p>August 20, 2018</p>
-<h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h2><p>An unlabeled dataset is applied ensemble categorical prediction methods to find the best accuracy and ROC score. Lesser features from random forest are removed and optimal parameters are found by gridsearch. Depending on customer needs, ROC score, accuracy, precision, recall, and F1-Score are all calculated as metrics to focus on correct predictions, true positives, false negatives, or the balance between true positives and false negatives.</p>
+<h2 id="Introduction">Introduction<a class="anchor-link" href="#Introduction">&#182;</a></h2><p>An unlabeled dataset is applied ensemble categorical prediction methods to find the best accuracy and ROC score. Lesser features from random forest are removed and optimal parameters are found by gridsearch. Depending on customer needs, ROC score, accuracy, precision, recall, and F1-Score are all calculated as metrics to focus on true positive over false positive rate, correct predictions, true positives, false negatives, or the balance between true positives and false negatives. For the purposes of this study, ROC score and precision are used.</p>
 <h2 id="Methods">Methods<a class="anchor-link" href="#Methods">&#182;</a></h2><p>The steps used for this analysis were: data exploration, conversion of categorical data into dummy numerical variables, filling in missing values with the mean, application of categorical prediction, removal of lesser features, random forest parameter gridsearch, and finding the model with best ROC score, accuracy, precision, recall, and F1-Score.</p>
 
 </div>
@@ -13615,7 +13615,7 @@ C:\ProgramData\Anaconda3\lib\site-packages\sklearn\grid_search.py:42: Deprecatio
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>With binary classification, logistic regression, decision tree classifier, and random forest classifier are selected. Logistic regression has a ROC score of 0.67 and an accuracy of 0.70; decision tree classifier has a ROC score of 0.84 and an accuracy of 0.85; random forest classifier has a ROC score of 0.87 and an accuracy of 0.89. Precision, recall, and F1-Score metrics also are calculated.</p>
+<p>With binary classification, logistic regression, decision tree classifier, and random forest classifier are selected. Logistic regression has a ROC score of 0.67 and a precision of 0.67; decision tree classifier has a ROC score of 0.84 and a precision of 0.81; random forest classifier has a ROC score of 0.87 and a precision of 0.92. Accuracy, recall, and F1-Score metrics also are calculated.</p>
 
 </div>
 </div>
@@ -13723,7 +13723,7 @@ C:\ProgramData\Anaconda3\lib\site-packages\sklearn\grid_search.py:42: Deprecatio
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Since random forest classifier performed the best, the number of estimators are increased for a higher ROC score of 0.91 and an accuracy of 0.92. Precision, recall, and F1-Score metrics also are calculated. The features that most affect the model are above 0.01 [Figure 52].</p>
+<p>Since random forest classifier performed the best, the number of estimators are increased for a higher ROC score of 0.91 and a precision of 0.93. Accuracy, recall, and F1-Score metrics also are calculated. The features that most affect the model are above 0.01 [Figure 52].</p>
 
 </div>
 </div>
@@ -13932,7 +13932,7 @@ dtype: float64</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Once the lesser features are removed, the ROC score increased to 0.94 and accuracy increased to 0.94.</p>
+<p>Once the lesser features are removed, the ROC score increased to 0.94 and precision increased to 0.95.</p>
 
 </div>
 </div>
@@ -14033,7 +14033,7 @@ dtype: float64</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Once the parameters are tuned, ROC score and accuracy increased slightly above 0.94 for both.</p>
+<p>Once the parameters are tuned, ROC score increased slightly above 0.94 and precision stayed about the same.</p>
 
 </div>
 </div>
@@ -14131,7 +14131,7 @@ dtype: float64</pre>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Figure-53:-Using-the-predict_proba-instead-of-predict-function,-the-ROC-area-under-the-curve-score-is-0.98">Figure 53: Using the predict_proba instead of predict function, the ROC area under the curve score is 0.98<a class="anchor-link" href="#Figure-53:-Using-the-predict_proba-instead-of-predict-function,-the-ROC-area-under-the-curve-score-is-0.98">&#182;</a></h4><p>Increasing the number of estimators to 1000 slightly increased both ROC score and accuracy slightly.</p>
+<h4 id="Figure-53:-Using-the-predict_proba-instead-of-predict-function,-the-ROC-area-under-the-curve-score-is-0.98">Figure 53: Using the predict_proba instead of predict function, the ROC area under the curve score is 0.98<a class="anchor-link" href="#Figure-53:-Using-the-predict_proba-instead-of-predict-function,-the-ROC-area-under-the-curve-score-is-0.98">&#182;</a></h4><p>Increasing the number of estimators to 1000 slightly increased both ROC score and precision slightly.</p>
 
 </div>
 </div>
